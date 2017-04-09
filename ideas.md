@@ -1,4 +1,4 @@
-#Ideas
+# Ideas
 - Meet me Halfway
   - Find everyone's starting points to calculate a halfway point in which all the users can meet up
 - Bathroom locator
