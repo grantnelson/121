@@ -1,10 +1,19 @@
 Ideas
-- Meet me Halfway: Find everyone's starting points to calculate a halfway point.
-- Bathroom locator: Find the nearest bathroom on campus
-- Parking Locator: Find the nearest open parking spot.
-- Hotspot Finder: Using your location, find popular tourist/hot spots around the area and 
-                  connect the dots to calculate the fastest route through all the spots.
-- Timezone finder: Check timezones based on map location and find the difference timezone.
-- Photo diary: Marks location of photo taken on map.
-- Mystery Spot Search: Generate random spot and the user has to find the area. Hot or cold, in the range of the user. 
-- Mapping the best way to each class.
+- Meet me Halfway
+  - Find everyone's starting points to calculate a halfway point in which all the users can meet up
+- Bathroom locator
+  - Find the nearest bathroom on campus. Maybe implement user reviews, bathroom details, cleanliness etc
+- Parking Locator
+  - Find the nearest open parking spot/parking lot. 
+- Class Mapper
+  - Mapping the best/fastest way to each class.
+- Skateboard/Bike Router
+  - For skaters/bikers, it may be difficult to navigate through the campus due to many different reasons, for example the route might have too many cracks and potholes, too many people, too steep of a hill, cops scoping out for tickets. Users will be able to insert a start and end location, choose some kind of route difficulty and see what the route is like in terms of route conditions, number of people and other factors. Users can write comments in an upvote fashion.  
+- Hotspot Finder
+  - Using your location, find popular tourist/hot spots around the area and connect the dots to calculate the fastest route through all the spots.
+- Timezone finder
+  - Check timezones based on map location and find the difference timezone.
+- Photo diary
+  - Marks location of photo taken on map.
+- Mystery Spot Search
+  - Generate random spot and the user has to find the area. Hot or cold, in the range of the user. Sort of like a game.  
