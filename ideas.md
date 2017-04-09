@@ -6,7 +6,7 @@
 - Parking Locator
   - Find the nearest open parking spot/parking lot. 
 - Class Mapper
-  - Mapping the best/fastest way to each class.
+  - User inputs all their classes and locations and will get back a mapping of the best/fastest way to each class.
 - Skateboard/Bike Router
   - For skaters/bikers, it may be difficult to navigate through the campus due to many different reasons, for example the route might have too many cracks and potholes, too many people, too steep of a hill, cops scoping out for tickets. Users will be able to insert a start and end location, choose some kind of route difficulty and see what the route is like in terms of route conditions, number of people and other factors. Users can write comments in an upvote fashion.  
 - Hotspot Finder
