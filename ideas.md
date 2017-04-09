@@ -11,6 +11,8 @@
   - For skaters/bikers, it may be difficult to navigate through the campus due to many different reasons, for example the route might have too many cracks and potholes, too many people, too steep of a hill, cops scoping out for tickets. Users will be able to insert a start and end location, choose some kind of route difficulty and see what the route is like in terms of route conditions, number of people and other factors. Users can write comments in an upvote fashion.  
 - Hotspot Finder
   - Using your location, find popular tourist/hot spots around the area and connect the dots to calculate the fastest route through all the spots.
+- Gas Consumption Tracker
+  - Based on a start and end point, find how much gas you'll be using and how much you're paying for that gas. 
 - Timezone finder
   - Check timezones based on map location and find the difference timezone.
 - Photo diary
