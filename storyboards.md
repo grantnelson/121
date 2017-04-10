@@ -17,3 +17,9 @@ Bathroom Finder - Grant Nelson
 
 Class Routing Map - Grant Nelson
 ![Class Routing Map Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/MapClassRoutesStory.jpg)
+
+Hotspot Finder - Luis Padilla
+![Hotspot Finder Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/HotSpotFinderSB.JPG)
+
+Halfway Point - Luis Padilla
+![Halfway Point Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/HalfWaySB.JPG)
