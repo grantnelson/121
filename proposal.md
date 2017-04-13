@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Project Title:
 
 ## Summary 
@@ -8,26 +7,18 @@ Never worry about finding your classes again! With x, it's easy to locate your c
 
 ## Which feedback we took
 
-## Features
-=======
-#Project Title:
-
-##Summary 
+## Summary 
 Never worry about finding your classes again! With x, it's easy to locate your classes and get there on time. (110 char)
 
-##Storyboard
+## Storyboard
 
-##Which feedback we took
+## Which feedback we took
 
-##Features
->>>>>>> 85be5c09ae36eb28ee52176757a2dde4dbea91d1
+## Features
 - Input your classes & classtimes and our app will quickly locate them all
-- Our app will also trace a route between the classes in the order it was inputted
-- Along with the map view, you can also view your class information and distance between each class
-- You can also edit and change your classes, order of classes, and class times 
+- Our app will trace a route between the classes in the order they were inputted
+- Along with the map view, you can view your class information and distance between each class
+- You can edit and change your classes, order of classes, and class times 
 
-<<<<<<< HEAD
 ## How were splitting the programming
-=======
-##How were splitting the programming
->>>>>>> 85be5c09ae36eb28ee52176757a2dde4dbea91d1
+
