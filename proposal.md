@@ -1,7 +1,7 @@
 # Project Title: ideas - UCSDMaps, ClassTrek,   
 
 ## Summary 
-Never worry about finding your classes again! With x, it's easy to locate your classes and get there on time. (110 char)
+Never worry about finding your classes again! With our app, it's easy to locate your classes and get there on time. (110 char)
 
 ## Storyboard
 ![Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/proposalstoryboard.jpg)
