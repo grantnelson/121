@@ -16,4 +16,5 @@ Never worry about finding your classes again! With our app, it's easy to locate 
 
 ## How were splitting the programming
 Crystal: Visual Designer, UI Design: front-end development
+
 Grant: UX/UI Design, QA/User Testing
