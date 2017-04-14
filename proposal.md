@@ -1,4 +1,4 @@
-# Project Title: ideas - UCSDMaps, ClassTrek,   
+# Project Title: ideas - UCSDMaps, ClassTrek, Pathfinder  
 
 ## Summary 
 Never worry about finding your classes again! With our app, it's easy to locate your classes and get there on time. (110 char)
