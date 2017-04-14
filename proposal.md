@@ -1,4 +1,4 @@
-# Project Title: ideas - UCSDMaps, ClassTrek, Pathfinder, UCSD Classy  
+# Project Title: ideas - UCSDMaps, ClassTrek, Pathfinder, UCSD Classy   
 
 ## Summary 
 Never worry about finding your classes again! With our app, it's easy to locate your classes and get there on time. (110 char)
@@ -19,3 +19,5 @@ We had much feedback that was taken into consideration. "This definitely identif
 Crystal: Visual Designer, UI Design: front-end development
 
 Grant: UX/UI Design, QA/User Testing
+
+Luis: Layout and Design, UI/Testing, Front End
