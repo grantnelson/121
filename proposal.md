@@ -15,4 +15,5 @@ Never worry about finding your classes again! With our app, it's easy to locate 
 - You can edit and change your classes, order of classes, and class times 
 
 ## How were splitting the programming
+Crystal: Visual Designer, UI Design: front-end development
 
