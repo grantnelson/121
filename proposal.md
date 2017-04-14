@@ -7,6 +7,7 @@ Never worry about finding your classes again! With our app, it's easy to locate 
 ![Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/proposalstoryboard.jpg)
 
 ## Which feedback we took
+We had much feedback that was taken into consideration. "This definitely identifies a problem". "This is a really neat map idea so no students will get lost". We did recieve some negative feedback that mainly centered around being able to map your route in other apps. We hope to overcome this by making the experience tailored to UCSD students, and designing it in a way that optimizes the experience. 
 
 ## Features
 - Input your classes & classtimes and our app will quickly locate them all
