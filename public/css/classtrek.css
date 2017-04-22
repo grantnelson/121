@@ -1,0 +1,16 @@
+/* ========= CENTER TO MOBILE SIZE ======== */
+#background {
+  background-color: #d7d7d7;
+}
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.inner {
+  max-width: 400px;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+}

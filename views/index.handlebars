@@ -3,13 +3,14 @@
 
 <!-- Basic Page Info -->
 <head>
-<title>Simple Map</title>
+<title>ClassTrek</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="/css/classtrek.css" rel="stylesheet">
 
 <!-- Map Style -->
 <style>
@@ -32,7 +33,12 @@
 </head>
 
 <body>
+<div class="outer">
+  <div class="inner">
     <div id="map"></div>
+  </div>
+</div>
+<!-- Google Map API Script -->
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -55,7 +61,7 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('You Are Here');
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
