@@ -4,7 +4,7 @@
 Never worry about finding your classes again! With our app, it's easy to locate your classes and get there on time.
 
 ## Storyboard
-![Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Storyboard%20Images/proposalstoryboard.jpg)
+![Storyboard](https://github.com/dssung/COGS121-NONAME/blob/master/Planning/Storyboard%20Images/proposalstoryboard.jpg)
 
 ## Which feedback we took
 We had much feedback that was taken into consideration. "This definitely identifies a problem". "This is a really neat map idea so no students will get lost". 
