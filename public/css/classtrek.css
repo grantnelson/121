@@ -122,3 +122,7 @@ footer .glyphicon-search {
     padding-right: 60px;
     padding-top: 10px;
 }
+footer .col-xs-3 a {
+    text-decoration: none;
+    color: #999;
+}
