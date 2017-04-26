@@ -87,3 +87,38 @@ html, body {
 #target {
     width: 345px;
 }
+/* ================= FOOTER-NAV =================*/
+footer {
+    position: fixed;
+    width: 400px;
+    height: 60px;
+    background-color: white;
+    top: 100%;
+    margin-top: -50px;
+    border-top: #999 2px solid;
+}
+footer .col-xs-3 {
+    display: block;
+    text-align: center;
+    width: 33%;
+}
+footer .glyphicon-list {
+    float: left;
+    margin: auto;
+    font-size: 2em;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+footer .glyphicon-home {
+    margin: auto;
+    font-size: 2em;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+footer .glyphicon-search {
+    float: right;
+    margin: auto;
+    font-size: 2em;
+    padding-right: 60px;
+    padding-top: 10px;
+}
