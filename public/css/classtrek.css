@@ -9,7 +9,7 @@
   width: 100%;
 }
 .inner {
-  max-width: 400px;
+  max-width: 414px;
   height: 100%;
   background-color: white;
   margin: 0 auto;
@@ -19,7 +19,7 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-	height: 50%;
+	height: 65%;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -71,7 +71,7 @@ html, body {
     font-weight: 300;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 400px;
+    width: 414px;
     height: 50px;
 }
 #pac-input:focus {
@@ -90,11 +90,11 @@ html, body {
 /* ================= FOOTER-NAV =================*/
 footer {
     position: fixed;
-    width: 400px;
-    height: 60px;
+    width: 414px;
+    height: 65px;
     background-color: white;
-    top: 75%;
-    margin-top: -50px;
+    top: 90%;
+    margin: auto;
     border-top: #999 2px solid;
 }
 footer .col-xs-3 {
@@ -105,22 +105,22 @@ footer .col-xs-3 {
 footer .glyphicon-list {
     float: left;
     margin: auto;
-    font-size: 2em;
+    font-size: 2.5em;
     padding-left: 30px;
-    padding-top: 10px;
+    padding-top: 25px;
 }
 footer .glyphicon-home {
     margin: auto;
-    font-size: 2em;
+    font-size: 2.5em;
     padding-left: 0px;
-    padding-top: 10px;
+    padding-top: 25px;
 }
 footer .glyphicon-search {
     float: right;
     margin: auto;
-    font-size: 2em;
+    font-size: 2.5em;
     padding-right: 60px;
-    padding-top: 10px;
+    padding-top: 25px;
 }
 footer .col-xs-3 a {
     text-decoration: none;
