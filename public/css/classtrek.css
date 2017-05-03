@@ -138,9 +138,15 @@ footer .focusme {
     text-align: center;
     font-family: Roboto;
     color:#000066;
+    margin: 0 auto;
+    text-decoration: underline;
 }
 
-#add-input{
+.top button{
+    height: 50px;
+    width: 50px;
+}
+#add{
     text-align: center;
     background-color: #fff;
     font-family: Roboto;
