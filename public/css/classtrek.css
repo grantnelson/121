@@ -130,3 +130,24 @@ footer .focusme {
   color: black !important;
   /*text-decoration: underline !important;*/
 }
+
+
+/*--------------Schedule---------------*/
+
+.top h1, p{
+    text-align: center;
+    font-family: Roboto;
+    color:#000066;
+}
+
+#add-input{
+    text-align: center;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 19 13px 19 13px;
+    text-overflow: ellipsis;
+    width: 350px;
+    height: 50px;
+}
