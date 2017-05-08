@@ -8,4 +8,5 @@ Adding Classes UI - Daniel
 ![Class Adder](https://github.com/dssung/COGS121-NONAME/blob/master/Planning/MS8images/adding_classes_daniel.jpeg)
 
 Viewing the Floorplan UI - Grant 
-![Floorplan]
+![Floorplan](https://github.com/dssung/COGS121-NONAME/blob/master/Planning/MS8images/floorplan1.jpg)
+![Floorplan2](https://github.com/dssung/COGS121-NONAME/blob/master/Planning/MS8images/floorplan2.jpg)
