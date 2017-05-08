@@ -3,3 +3,6 @@ Class Schedule UI - Crystal
 
 Adding Class UI - Luis
 ![Add Class](https://github.com/dssung/COGS121-NONAME/blob/master/Planning/MS8images/adding%20class%20luis.JPG)
+
+Adding Classes UI - Daniel
+![Class Adder] https://github.com/dssung/COGS121-NONAME/blob/master/Planning/MS8images/adding_classes_daniel.jpeg)
