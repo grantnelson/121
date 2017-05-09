@@ -9,7 +9,7 @@ app.controller('mainController', function($scope){
   };
 
   $scope.removeCourse = function(e){
-    angular.element(e.target).parent().remove(); 
+    angular.element(e.target).parent().remove();
   };
 
 });
