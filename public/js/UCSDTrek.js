@@ -5,7 +5,10 @@ app.controller('mainController', function($scope){
   $scope.courses = [{}];
 
   $scope.addClass = function(){
-    $scope.courses.push({});
+      $scope.courses.push({});
+      autocompleteInit();
+
+
   };
 
   $scope.removeCourse = function(e){

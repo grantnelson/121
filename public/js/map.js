@@ -1,20 +1,23 @@
  var map, infoWindow;
+
+      //Initialize Map
       function initMap() {
-
-        var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 32.880060, lng: -117.234014},
-          zoom: 15
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-        directionsDisplay.setMap(map);
+
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer({map: map, suppressMarkers: true});
+
+        autocompleteInit();
+
         infoWindow = new google.maps.InfoWindow;
 
         //Call calculate route when submit is clicked
         document.getElementById('submit').addEventListener('click', function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
-          window.alert("hello");
         });
 
         // Locate user position
@@ -38,6 +41,8 @@
         }
       }
 
+
+      //Location error handler
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -46,14 +51,30 @@
         infoWindow.open(map);
       }
 
+      function autocompleteInit(){
+        var inputs = document.getElementsByClassName('waypoints');
+
+        for (var i = 0; i < inputs.length; i++){
+            var autocomplete = new google.maps.places.Autocomplete(inputs[i]);
+        }
+      }
+
+
+      //Calculate and Display route
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 
         var loc_inputs = document.getElementsByClassName("waypoints");
+        var names_inputs = document.getElementsByClassName("courseNames");
+        var room_inputs = document.getElementsByClassName("roomNums");
 
         var origin;
         var destination;
         var waypts = [];
+        var courseNames = [];
+        var roomNums = [];
 
+
+        //Store waypoints into
         for (var i = 0; i < loc_inputs.length; i++) {
           if (i == 0){
             origin = loc_inputs[i].value;
@@ -69,6 +90,9 @@
               stopover: true
             });
           }
+
+          courseNames[i] = names_inputs[i].value;
+          roomNums[i] = room_inputs[i].value;
         }
 
         directionsService.route({
@@ -80,6 +104,40 @@
         }, function(response, status) {
           if (status === 'OK') {
             directionsDisplay.setDirections(response);
+            var my_route = response.routes[0];
+
+            //Create markers for origin + waypoints
+            for (var i = 0; i < my_route.legs.length; i++) {
+                var marker = new google.maps.Marker({
+                    position: my_route.legs[i].start_location,
+                    label: "" + (i+1),
+                    map: map
+                });
+
+                marker['locInfo'] = new google.maps.InfoWindow({
+                  content: courseNames[i] + "\nRoom: " + roomNums[i]
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                  this['locInfo'].open(map, this);
+                });
+              }
+
+              //Destination marker + infoWindow
+                var marker = new google.maps.Marker({
+                  position: my_route.legs[i-1].end_location,
+                  label: ""+(i+1),
+                  map: map
+                });
+
+                marker['locInfo'] = new google.maps.InfoWindow({
+                  content: courseNames[courseNames.length - 1] + "Room: " + roomNums[roomNums.length - 1]
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                  this['locInfo'].open(map, this);
+                });
+
           } else {
             window.alert('Directions request failed due to ' + status);
           }

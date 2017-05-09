@@ -37,9 +37,9 @@
 
             <div ng-repeat= "course in courses">
               <form class="courseForm">
-                <label>Course: <input type="text"/></label><br/>
-                <label>Hall/Building: <input type="text" class = "waypoints"/></label><br/>
-                <label>Room Number: <input type="text"/></label><br/>
+                <label>Course: <input type="text" class = "courseNames"/></label><br/>
+                <label>Hall/Building: <input type="text" class = "waypoints" /></label><br/>
+                <label>Room Number: <input type="text" class = "roomNums"/></label><br/>
                 <input type="button" ng-click="update(user)" value="Add"/>
                 <button ng-click = "removeCourse($event)"> Cancel </button>
               </form>
