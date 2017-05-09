@@ -1,61 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "UCSDTrek">
 
-<!-- Basic Page Info -->
-<head>
-<title>ClassTrek</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>ClassTrek</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS -->
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="/css/classtrek.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/classtrek.css" rel="stylesheet">
 
-<!-- JavaScript -->
-<script src="/js/map.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places"></script>
-
-</head>
-
-<body id="background">
-<div class="outer">
-  <div class="inner">
-<!-- Logo Image -->
-    <img src="../images/betaIcon.png"/>
-<!-- Search Box -->
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-  <div id="map"></div>
-
-<!-- Footer Nav -->
-<footer>
-<div class="row">
-	<div class="col-xs-3">
-		<a href="/schedule"><span class="glyphicon glyphicon-list"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href=""><span class="glyphicon glyphicon-home focusme"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
-	</div>
-</div>
-</footer>
+    <!-- JavaScript -->
+    <script src="/js/map.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="/js/UCSDTrek.js"></script>
+  </head>
 
 
-  </div>
-</div>
+  <body id="background" ng-controller = "mainController">
+    <div class="outer">
+
+        <!-- Logo Image -->
+        <img src="../images/betaIcon.png"/>
+        <!-- Search Box -->
+
+
+        <div class = "row">
+          <div class = "col-md-7">
+            <div id="map"></div>
+          </div>
+
+          <div class = "col-md-5">
+            <button ng-click = "addClass()">Add Classes</button>
+
+            <div ng-repeat= "course in courses">
+              <form class="courseForm">
+                <label>Course: <input type="text"/></label><br/>
+                <label>Hall/Building: <input id = "loc_input" type="text"/></label><br/>
+                <label>Room Number: <input type="text"/></label><br/>
+                <input type="button" ng-click="update(user)" value="Add"/>
+                <button ng-click = "removeCourse($event)"> Cancel </button>
+              </form>
+            </div>
+
+
+          </div>
+        </div>
 
 
 
+        <!-- Footer Nav -->
+        <footer>
+          <div class="row">
+    	       <div class="col-xs-3">
+    		         <a href="/schedule"><span class="glyphicon glyphicon-list"></span></a>
+    	       </div>
+
+            <div class="col-xs-3">
+    		         <a href=""><span class="glyphicon glyphicon-home focusme"></span></a>
+    	      </div>
+
+            <div class="col-xs-3">
+    		         <a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
+    	      </div>
+         </div>
+       </footer>
+
+
+    </div>
 
     <!-- Google Maps Script async -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&callback=initMap">
-    </script>
+     <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places&callback=initMap">
+     </script>
+  </body>
 
-
-
-</body>
 </html>

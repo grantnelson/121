@@ -33,7 +33,7 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
-      }	
+      }
 
       // function initAutocomplete() {
       //   var map = new google.maps.Map(document.getElementById('map'), {
