@@ -22,19 +22,24 @@
     <div class="outer">
 
         <!-- Logo Image -->
-        <img src="../images/betaIcon.png"/>
+        <div class = "logo">
+        <img src="../images/betaIcon.png" width= 50% height= 80px/>
+        </div>
+        
         <!-- Search Box -->
 
 
         <div class = "row">
+            &nbsp
           <div class = "col-md-7">
             <div id="map"></div>
           </div>
-
           <div class = "col-md-5">
             <button ng-click = "addClass()">Add Classes</button>
             <button id = "submit"> Submit </button>
 
+
+          </div>
             <div ng-repeat= "course in courses">
               <form class="courseForm">
                 <label>Course: <input type="text" class = "courseNames"/></label><br/>
@@ -44,12 +49,12 @@
                 <button ng-click = "removeCourse($event)"> Cancel </button>
               </form>
             </div>
-
-
           </div>
-        </div>
+        
 
+    </div>
 
+  </body>
 
         <!-- Footer Nav -->
         <footer>
@@ -69,12 +74,10 @@
        </footer>
 
 
-    </div>
 
     <!-- Google Maps Script async -->
      <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places&callback=initMap">
      </script>
-  </body>
 
 </html>
