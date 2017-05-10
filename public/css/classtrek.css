@@ -134,6 +134,15 @@ footer .focusme {
 
 
 /*--------------Schedule---------------*/
+.top {
+    background-color: #4286f4
+}
+
+.top h2{
+    text-align: center;
+    color: #FFD700
+}
+
 /**{
     box-sizing: border-box;
 }

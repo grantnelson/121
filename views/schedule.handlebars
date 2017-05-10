@@ -23,14 +23,15 @@
 
 
 
-            <div>
+            <div id = "outList" class = "top">
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-                <div ng-app="classList" ng-controller="listCtrl">
+                <div id = "inList" ng-app="classList" ng-controller="listCtrl">
                     <h2>Add Classes</h2>
                     <form ng-submit="classAdd()">
-                        <input type="text" ng-model="classInput" size="50" placeholder="Class - Location">
-                        <input type="submit" value="Add New">
+                        <input id = "addIn" type="text" ng-model="classInput" size="50" placeholder="Class - Location">
+                        <input id = "subIn" type="submit" value="Add New">
                     </form>
+
                     <div ng-repeat="class in cList">
                         <input type="checkbox" ng-model="class.done"> <span ng-bind="class.classText"></span>
                     </div>
