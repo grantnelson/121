@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html ng-app = "classlist">
-
+<html>
 <!-- Basic Page Info -->
 <head>
 <title>ClassTrek &mdash Schedule</title>
@@ -23,34 +22,38 @@
 
 
 
-            <div ng-controller = "classlistcontroller">
-                <form name="frm" ng-submit="addClass()">
-                    <input type="text" name="newList" ng-model="newList" required>
-                    <button ng-disable="frm.$invalid">Add</button>
-                </form>
-                <button ng-click = "clearClass()">Remove</button>
-                <ul>
-                    <li ng-repeat="class in classes">
-                        <input type="checkbox" ng-model="class.done">
-                        <span ng-class="{'done':class.done}">{{class.title}}</span>                       
-                    </li>
-                </ul>
+
+            <div>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+                <div ng-app="classList" ng-controller="listCtrl">
+                    <h2>Add Classes</h2>
+                    <form ng-submit="todoAdd()">
+                        <input type="text" ng-model="classInput" size="50" placeholder="Class - Location">
+                        <input type="submit" value="Add New">
+                    </form>
+                    <div ng-repeat="class in cList">
+                        <input type="checkbox" ng-model="class.done"> <span ng-bind="class.classText"></span>
+                    </div>
+                    <p><button ng-click="remove()">Remove Class</button></p>
+                    <script>
+
+                    var app = angular.module('classList', []); 
+                    app.controller('listCtrl', function($scope) {
+                        $scope.todoAdd = function() {
+                            $scope.cList.push({classText:$scope.classInput, done:false});
+                            $scope.classInput = "";
+                        };
+                        $scope.remove = function() {
+                            var oldList = $scope.cList;
+                            $scope.cList = [];
+                            angular.forEach(oldList, function(x) {
+                                if (!x.done) $scope.cList.push(x);
+                            });
+                        };
+                    });
+                    </script>
+                </div>
             </div>
-
-            <script>
-            angular.moduel('classlist',[]).
-            controller.('classlistcontroller',['$scope',function($scope){
-               $scope.addClass = function(){
-                $scope.classes.push({'title':$scope.newList, 'done':false})
-                $scope.newList = ''
-               }
-
-               $scope.clearClass = function(){
-                $scope.classes = $scope.classes.filter(function(item){return !item.done})
-               }
-            }}])
-            </script>
-
 <!--
             <div id = "title" class = "top">
                 <h2>Add Classes To Schedule</h2>
@@ -65,6 +68,8 @@
                 <button type="submit">Add</button> 
             </div> 
 -->
+
+
             <!-- Footer Nav -->
             <footer>
                 <div class="row">
