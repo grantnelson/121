@@ -27,7 +27,7 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
                 <div ng-app="classList" ng-controller="listCtrl">
                     <h2>Add Classes</h2>
-                    <form ng-submit="todoAdd()">
+                    <form ng-submit="classAdd()">
                         <input type="text" ng-model="classInput" size="50" placeholder="Class - Location">
                         <input type="submit" value="Add New">
                     </form>
@@ -39,7 +39,7 @@
 
                     var app = angular.module('classList', []); 
                     app.controller('listCtrl', function($scope) {
-                        $scope.todoAdd = function() {
+                        $scope.classAdd = function() {
                             $scope.cList.push({classText:$scope.classInput, done:false});
                             $scope.classInput = "";
                         };
