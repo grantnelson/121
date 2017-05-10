@@ -134,7 +134,7 @@ footer .focusme {
 
 
 /*--------------Schedule---------------*/
-*{
+/**{
     box-sizing: border-box;
 }
 
@@ -151,7 +151,6 @@ ul li {
     font-size: 18px;
     transition: 0.2s;
 
-    /* make the list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -199,7 +198,7 @@ ul li:hover {
     font-size: 16px;
 }
 
-/* Style the "Add" button */
+
 .addButton{
     padding: 10px;
     width: 25%;
@@ -214,7 +213,7 @@ ul li:hover {
 
 .addButton:hover {
     background-color: #bbb;
-}
+}*/
 
 
 /****** Style Star Rating Widget *****/

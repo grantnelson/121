@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "classlist">
 
 <!-- Basic Page Info -->
 <head>
@@ -13,55 +13,76 @@
 <link href="/css/classtrek.css" rel="stylesheet">
 
 <!-- JavaScript -->
-
 </head>
 
 <body id="background">
-<div class="outer">
-  <div class="inner">
-<!-- Logo Image -->
-    <img src="../images/betaIcon.png"/>
-
-
-    <div id = "title" class = "top">
-    	<h2>Add Classes To Schedule</h2>
-    	<input type="text" id="classInput" placeholder="Class - Location">
-    	<span onclick="addElement()" class="addButton">Add</span>
-
-    	<ul id="samples">
-    	</ul>
-
-    	<!--<header>
-    		<h1 id = "Add">Add Class</h1>
-    	</header>
-
-    	<input id="add" class="controls" type="text">
-
-    	<button type="submit">Add</button> -->
-	</div> 
-
-<!-- Footer Nav -->
-<footer>
-<div class="row">
-	<div class="col-xs-3">
-		<a href=""><span class="glyphicon glyphicon-list focusme"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href="/"><span class="glyphicon glyphicon-home"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
-	</div>
-</div>
-</footer>
-
-
-  </div>
-</div>
+    <div class="outer">
+        <div class="inner">
+            <!-- Logo Image -->
+            <img src="../images/betaIcon.png"/>
 
 
 
+            <div ng-controller = "classlistcontroller">
+                <form name="frm" ng-submit="addClass()">
+                    <input type="text" name="newList" ng-model="newList" required>
+                    <button ng-disable="frm.$invalid">Add</button>
+                </form>
+                <button ng-click = "clearClass()">Remove</button>
+                <ul>
+                    <li ng-repeat="class in classes">
+                        <input type="checkbox" ng-model="class.done">
+                        <span ng-class="{'done':class.done}">{{class.title}}</span>                       
+                    </li>
+                </ul>
+            </div>
+
+            <script>
+            angular.moduel('classlist',[]).
+            controller.('classlistcontroller',['$scope',function($scope){
+               $scope.addClass = function(){
+                $scope.classes.push({'title':$scope.newList, 'done':false})
+                $scope.newList = ''
+               }
+
+               $scope.clearClass = function(){
+                $scope.classes = $scope.classes.filter(function(item){return !item.done})
+               }
+            }}])
+            </script>
+
+<!--
+            <div id = "title" class = "top">
+                <h2>Add Classes To Schedule</h2>
+                <input type="text" id="classInput" placeholder="Class - Location">
+                <span onclick="addElement()" class="addButton">Add</span>
+                <ul id="samples">
+                </ul>
+                <header>
+                <h1 id = "Add">Add Class</h1>
+                </header>
+                <input id="add" class="controls" type="text">
+                <button type="submit">Add</button> 
+            </div> 
+-->
+            <!-- Footer Nav -->
+            <footer>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href=""><span class="glyphicon glyphicon-list focusme"></span></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="/"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
 
+    </div>
 </body>
+
 </html>
