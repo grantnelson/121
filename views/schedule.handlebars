@@ -2,7 +2,7 @@
 <html>
 <!-- Basic Page Info -->
 <head>
-<title>ClassTrek &mdash Schedule</title>
+<title>UCSDTrekker &mdash; Schedule</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -34,13 +34,13 @@
                         <input id = "subIn" type="submit" value="Add New">
                     </form>
 
-                    <div ng-repeat="class in cList">
-                        <input type="checkbox" ng-model="class.done"> <span ng-bind="class.classText"></span>
+                    <div id="classList" ng-repeat="class in cList">
+                        <input type="checkbox" class="regular-checkbox" ng-model="class.done"> <span ng-bind="class.classText"></span>
                     </div>
                     <p><button ng-click="remove()">Remove Class</button></p>
                     <script>
 
-                    var app = angular.module('classList', []); 
+                    var app = angular.module('classList', []);
                     app.controller('listCtrl', function($scope) {
                         $scope.classAdd = function() {
                             $scope.cList.push({classText:$scope.classInput, done:false});
@@ -68,8 +68,8 @@
                 <h1 id = "Add">Add Class</h1>
                 </header>
                 <input id="add" class="controls" type="text">
-                <button type="submit">Add</button> 
-            </div> 
+                <button type="submit">Add</button>
+            </div>
 -->
 
 

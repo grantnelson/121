@@ -45,42 +45,6 @@ html, body {
 #map #infowindow-content {
     display: inline;
 }
-.pac-card {
-    margin: 10px 10px 0 0;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-    font-family: Roboto;
-}
-#pac-container {
-    padding-bottom: 12px;
-    margin-right: 12px;
-}
-.pac-controls {
-    display: inline-block;
-    padding: 5px 11px;
-}
-.pac-controls label {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 300;
-}
-#pac-input {
-	background-color: #fff;
-	font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 414px;
-    height: 50px;
-}
-#pac-input:focus {
-    border-color: #4d90fe;
-}
 #title {
     color: #fff;
     background-color: #4d90fe;
@@ -94,8 +58,8 @@ html, body {
 /* ================= FOOTER-NAV =================*/
 footer {
     position: fixed;
-    width: 100%;
-    height: 12%;
+    width: 414px;
+    height: 10%;
     background-color: white;
     bottom: 0%;
     margin: auto;
@@ -137,15 +101,71 @@ footer .focusme {
 
 
 /*--------------Schedule---------------*/
+#outList {
+  height: 100%;
+  border-top: 2px solid #43a4ca;
+}
 .top {
-    background-color: #4286f4
+    background-color: #fff;
 }
 
 .top h2{
     text-align: center;
-    color: #FFD700
+    color: #43a4ca;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
-
+#addIn {
+  display: block;
+  margin: 0 auto;
+  height: 45px;
+  width: 350px;
+  font-size: 18px;
+  color: #999;
+  text-align: center;
+  border: 1.5px solid #999;
+}
+#addIn::placeholder {
+  color: #d3d3d3 !important;
+}
+#subIn {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  width: 350px;
+  font-size: 15px;
+  color: #43a4ca;
+  margin-bottom: 10px;
+  border: 1px solid #43a4ca;
+  background-color: #fff;
+}
+input:focus {
+  outline: none;
+}
+#outList button {
+  display: block;
+  margin: 5px auto;
+  width: 350px;
+  color: #43a4ca;
+  font-size: 15px;
+  border: 1px solid #43a4ca;
+  background-color: #fff;
+}
+#outList button:focus {
+  outline: none;
+}
+#outList #classList {
+  display: block;
+  margin: 5px auto;
+  width: 300px;
+  text-align: left;
+  font-size: 25px;
+  color: #43a4ca;
+}
+.regular-checkbox {
+  background-color: #fff;
+  border: 1px solid #43a4ca;
+}
 /****** Style Star Rating Widget *****/
 
 .rating {
@@ -189,4 +209,3 @@ footer .focusme {
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
-
