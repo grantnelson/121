@@ -22,7 +22,7 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-	height: 300px;
+	height: 725px;
     width: 100%;
 }
 /* Optional: Makes the sample page fill the window. */
@@ -162,9 +162,10 @@ input:focus {
   font-size: 25px;
   color: #43a4ca;
 }
-.regular-checkbox {
-  background-color: #fff;
-  border: 1px solid #43a4ca;
+#input .regular-checkbox {
+  background-color: #fff !important;
+  border: 2px solid #43a4ca !important;
+  box-shadow: 0;
 }
 
 /*========== Explore Page ==============*/
