@@ -23,13 +23,30 @@
  * element that contains the map. */
 #map {
   height: 300px;
-  width: 300px;
+  width: 685px;
   border-top: 2px solid #43a4ca;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
+.row .col-md-5{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+/*Class Form*/
+.courseForm {
+  /*float: left;*/
+  background-color: #4286f4;
+  /*padding: 10px;
+  margin: 10px;*/
+  margin: 0 auto;
+  display: block;
+  width: 685px;
+  text-align: center;
+}
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -215,13 +232,6 @@ input:focus {
  float: right;
 }
 
-/*Class Form*/
-.courseForm {
-  float: left;
-  background-color: #4286f4;
-  padding: 10px;
-  margin: 10px;
-}
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
