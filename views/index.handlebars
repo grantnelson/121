@@ -17,68 +17,54 @@
     <script src="/js/UCSDTrek.js"></script>
   </head>
 
-
   <body id="background" ng-controller = "mainController">
     <div class="outer">
-
-        <!-- Logo Image -->
-        <div class = "logo">
+      <!-- Logo Image -->
+      <div class = "logo">
         <img src="../images/betaIcon.png" width= 50% height= 80px/>
-        </div>
+      </div>
 
-        <div id="map"></div>
-        <!-- Search Box -->
+      <div id="map"></div>
+      <!-- Search Box -->
 
-
-        <div class = "col-md-5">
+      <div class = "row">
+        <div class = "col-md-7">
+          <div class = "col-md-5">
             <button ng-click = "addClass()">Add Classes</button>
             <button id = "submit"> Submit </button>
           </div>
+        </div>
+        
+        <div ng-repeat= "course in courses">
+          <form class="courseForm">
+            <label>Course:<input type="text" class = "courseNames"/></label><br/>
+            <label>Hall/Building:<input type="text" class = "waypoints" /></label><br/>
+            <label>Room Number:<input type="text" class = "roomNums"/></label><br/>
+            <input type="button" ng-click="update(user)" value="Add"/>
+            <button ng-click = "removeCourse($event)"> Cancel </button>
+          </form>
+        </div>
+      </div>
 
-        <div class = "row">
-            &nbsp
-          <div class = "col-md-7"></div>
-
-          
-
-            <div ng-repeat= "course in courses">
-              <form class="courseForm">
-                <label>Course:<input type="text" class = "courseNames"/></label><br/>
-                <label>Hall/Building:<input type="text" class = "waypoints" /></label><br/>
-                <label>Room Number:<input type="text" class = "roomNums"/></label><br/>
-                <input type="button" ng-click="update(user)" value="Add"/>
-                <button ng-click = "removeCourse($event)"> Cancel </button>
-              </form>
-            </div>
-
+      <!-- Footer Nav -->
+      <footer>
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="/schedule"><span class="glyphicon glyphicon-list"></span></a>
           </div>
-
-    </div>
-
-  </body>
-
-        <!-- Footer Nav -->
-        <footer>
-          <div class="row">
-    	       <div class="col-xs-3">
-    		         <a href="/schedule"><span class="glyphicon glyphicon-list"></span></a>
-    	       </div>
-
-            <div class="col-xs-3">
-    		         <a href=""><span class="glyphicon glyphicon-home focusme"></span></a>
-    	      </div>
-
-            <div class="col-xs-3">
-    		         <a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
-    	      </div>
-         </div>
-       </footer>
-
-
+        <div class="col-xs-3">
+            <a href=""><span class="glyphicon glyphicon-home focusme"></span></a>
+        </div>
+        <div class="col-xs-3">
+            <a href="/explore"><span class="glyphicon glyphicon-search"></span></a>
+        </div>
+       </div>
+     </footer>
 
     <!-- Google Maps Script async -->
      <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places&callback=initMap">
      </script>
-
+    </div>
+  </body>
 </html>
