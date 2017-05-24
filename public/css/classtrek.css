@@ -1,69 +1,123 @@
-/* ========= CENTER TO MOBILE SIZE ======== */
-#background {
-  background-color: #d7d7d7;
+
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
-.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+
+body {
+    padding-top: 65px;
+    background-color: ;
 }
-.logo {
-  text-align: center;
+
+
+.navbar-header {
+    color: #006A96;
+    background-color: #006A96;
 }
-.inner {
-  max-width: 414px;
-  height: 100%;
+
+.logo{
+  width: 50%;
+  height: 50%;
+}
+#submit {
+   background-color: #00465F;
+   color: white;
+   text-align: center;
+   font-size: 18px;
+   cursor: pointer;
+   margin: 10px;
+   height: 10%;
+}
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;}
+
+.tab{
+  color: white;
+}
+
+.focusme {
+  color: #FFCD00;
+}
+
+.button{
+  color: white;
+}
+
+#removeBtn {
   background-color: white;
-  margin: 0 auto;
+  color: #AFA9A0;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
 }
+#addBtn{
+  background-color: #00C6D7;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
 
 /* ================= MAP STYLE =================*/
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
+html,
+body,
 #map {
-  height: 300px;
-  width: 685px;
-  border-top: 2px solid #43a4ca;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.col-md-7{
-  padding-left: 350px;
+label {
+  display:block;
+  text-align:left;
 }
 
-.col-md-5 button{
-  float: left;
-  display: block;
-  margin: 5px 5px auto 10px;
-  color: #43a4ca;
-  font-size: 15px;
-  border: 1px solid #43a4ca;
-  background-color: #fff;
-  text-align: center;
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /*Class Form*/
 .courseForm {
   /*float: left;*/
-  background-color: #fff;
-  border: 2px solid #43a4ca;
-  /*padding: 10px;
-  margin: 10px;*/
-  margin: 0 auto;
-  display: block;
-  width: 685px;
+  border: 2px solid  #006A96;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
 }
 
-/* Optional: Makes the sample page fill the window. */
-html, body {
- 	height: 95%;
-    margin: 0;
-    padding: 0;
-}
 #description {
     font-family: Roboto;
     font-size: 15px;
@@ -88,49 +142,11 @@ html, body {
 #target {
     width: 345px;
 }
-/* ================= FOOTER-NAV =================*/
-footer {
-    position: fixed;
-    width: 414px;
-    height: 10%;
-    background-color: white;
-    bottom: 0%;
-    margin: 0 auto;
-    border-top: #999 2px solid;
-}
-footer .col-xs-3 {
-    display: block;
-    text-align: center;
-    width: 33%;
-}
-footer .glyphicon-list {
-    float: left;
-    margin: auto;
-    font-size: 2.5em;
-    padding-left: 30px;
-    padding-top: 25px;
-}
-footer .glyphicon-home {
-    margin: auto;
-    font-size: 2.5em;
-    padding-left: 0px;
-    padding-top: 25px;
-}
-footer .glyphicon-search {
-    float: right;
-    margin: auto;
-    font-size: 2.5em;
-    padding-right: 60px;
-    padding-top: 25px;
-}
-footer .col-xs-3 a {
-    text-decoration: none;
-    color: #999;
-}
-footer .focusme {
-  color: black !important;
-  /*text-decoration: underline !important;*/
-}
+/*-Nav-*/
+
+
+
+
 
 
 /*--------------Schedule---------------*/

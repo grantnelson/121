@@ -17,12 +17,18 @@
 </head>
 
 <body id="background">
-<div class="outer">
-  <div class="inner">
-        <!-- Logo Image -->
-        <div class = "logo">
-        <img src="../images/betaIcon.png" width= 50% height= 80px/>
-        </div>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+   <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-brand" href="">
+        <img id = "logo" alt="Brand" src= "../images/logo.svg">
+      </a>
+    </div>
+   </div>
+   </nav>
+
+
 
 <!-- Explore List -->
 <div id="explore-content">
@@ -306,25 +312,29 @@
     <div id="contents">
         {{about}}
     </div>
+
+    <!--Nav Bar -->
+     <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/schedule">
+              <span class="glyphicon glyphicon-list tab"></span>
+            </a>
+
+            <a class="navbar-brand" href="/">
+              <span class="glyphicon glyphicon-home tab"></span>
+            </a>
+
+            <a class="navbar-brand" href="">
+              <span class="glyphicon glyphicon-search focusme"></span>
+            </a>
+        </div>
+      </div>
+    </nav>
 </div>
-<!-- Footer Nav -->
-<footer>
-<div class="row">
-	<div class="col-xs-3">
-		<a href="/schedule"><span class="glyphicon glyphicon-list"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href="/"><span class="glyphicon glyphicon-home"></span></a>
-	</div>
-	<div class="col-xs-3">
-		<a href=""><span class="glyphicon glyphicon-search focusme"></span></a>
-	</div>
-</div>
-</footer>
 
 
-  </div>
-</div>
+
 
 
 
