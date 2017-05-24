@@ -30,9 +30,14 @@
   text-align: center;
 }
 
-.row .col-md-5{
-  margin: 0 auto;
+.col-md-5 button{
+  float: left;
   display: block;
+  margin: 5px 5px auto 10px;
+  color: #43a4ca;
+  font-size: 15px;
+  border: 1px solid #43a4ca;
+  background-color: #fff;
   text-align: center;
 }
 
