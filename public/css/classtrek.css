@@ -55,7 +55,9 @@
   margin: 0 auto;
   display: block;
   width: 685px;
+  color: #43a4ca;
   text-align: center;
+  font-size: 15px;
 }
 
 /* Optional: Makes the sample page fill the window. */
