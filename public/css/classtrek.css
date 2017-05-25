@@ -1,3 +1,6 @@
+li {
+	list-style: none;
+}
 
 
 .row {
@@ -80,7 +83,7 @@ body {
 html,
 body,
 #map {
-  height: 100%;
+  height: 95%;
   width: 100%;
 }
 
@@ -112,7 +115,7 @@ label {
 /*Class Form*/
 .courseForm {
   /*float: left;*/
-
+  background-color: white;
   border: 2px solid  #006A96;
   padding: 10px;
   margin: 10px;

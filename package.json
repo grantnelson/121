@@ -12,10 +12,12 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "angular-ui-sortable": "^0.17.1",
     "express": "^3.21.2",
     "express3-handlebars": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "mustache": "^2.3.0"
   },
   "engines": {
     "node": "0.10.x"
