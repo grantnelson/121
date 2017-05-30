@@ -1,88 +1,66 @@
 <!DOCTYPE html>
 <html>
 <!-- Basic Page Info -->
-<head>
-<title>UCSDTrekker &mdash; Schedule</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>UCSDTrekker &mdash; Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS -->
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="/css/classtrek.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/classtrek.css" rel="stylesheet">
+    <link rel='stylesheet' href='/js/fullCalendar/fullcalendar.min.css'/>
 
-<!-- JavaScript -->
-</head>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='/js/fullCalendar/moment.js'></script>
+    <script src='/js/fullCalendar/fullcalendar.min.js'></script>
+    <script src = "js/fullCalendar/calendar.js"></script>
 
-<body id="background">
+  </head>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-   <div class="container-fluid">
-     <div class="navbar-header">
-      <a class="navbar-brand" href="">
-        <img id = "logo" alt="Brand" src= "../images/logo.svg">
-      </a>
-    </div>
-   </div>
-   </nav>
+  <body id="background">
 
+    <div id = "calendar"></div>
 
-
-
-
-
-            <div id = "outList" class = "top">
-                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-                <div id = "inList" ng-app="classList" ng-controller="listCtrl">
-                    <h2>Add Classes</h2>
-                    <form ng-submit="classAdd()">
-                        <input id = "addIn" type="text" ng-model="classInput" size="50" placeholder="Class - Location">
-                        <input id = "subIn" type="submit" value="Add New">
-                    </form>
-
-                    <div id="classList" ng-repeat="class in cList">
-                        <input type="checkbox" class="regular-checkbox" ng-model="class.done"> <span ng-bind="class.classText"></span>
-                    </div>
-                    <p><button ng-click="remove()">Remove Class</button></p>
-                    <script>
-
-                    var app = angular.module('classList', []);
-                    app.controller('listCtrl', function($scope) {
-                        $scope.classAdd = function() {
-                            $scope.cList.push({classText:$scope.classInput, done:false});
-                            $scope.classInput = "";
-                        };
-                        $scope.remove = function() {
-                            var oldList = $scope.cList;
-                            $scope.cList = [];
-                            angular.forEach(oldList, function(x) {
-                                if (!x.done) $scope.cList.push(x);
-                            });
-                        };
-                    });
-                    </script>
-                </div>
-
-                <!--Nav Bar -->
-                 <nav class="navbar navbar-default navbar-fixed-bottom">
-                  <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="">
-                          <span class="glyphicon glyphicon-list focusme"></span>
-                        </a>
-
-                        <a class="navbar-brand" href="/">
-                          <span class="glyphicon glyphicon-home tab"></span>
-                        </a>
-
-                        <a class="navbar-brand" href="/explore">
-                          <span class="glyphicon glyphicon-search tab"></span>
-                        </a>
-                    </div>
-                  </div>
-                  </nav>
-            </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container-fluid">
+       <div class="navbar-header">
+        <a class="navbar-brand" href="">
+          <img id = "logo" alt="Brand" src= "../images/logo.svg">
+        </a>
+      </div>
+     </div>
+     </nav>
 
 
-</body>
+
+
+
+     <!--Nav Bar -->
+     <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">
+              <span class="glyphicon glyphicon-list focusme"></span>
+            </a>
+
+            <a class="navbar-brand" href="/">
+              <span class="glyphicon glyphicon-home tab"></span>
+            </a>
+
+            <a class="navbar-brand" href="/explore">
+              <span class="glyphicon glyphicon-search tab"></span>
+            </a>
+        </div>
+      </div>
+      </nav>
+
+    <div id='calendar'></div>
+
+
+  </body>
 </html>
