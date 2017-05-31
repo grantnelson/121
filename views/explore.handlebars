@@ -11,7 +11,55 @@
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="/css/classtrek.css" rel="stylesheet">
+<style>
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
+fieldset, label { margin: 0; padding: 0; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  border: none;
+  outline: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 55px;
+  border-radius: 10px;
+  float: center;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
 <!-- JavaScript -->
 
 </head>
@@ -22,7 +70,7 @@
    <div class="container-fluid">
      <div class="navbar-header">
       <a class="navbar-brand" href="">
-        <img id = "logo" alt="Brand" src= "../images/logo.svg">
+        <img id = "logo" alt="Brand" src= "../images/logo.png">
       </a>
     </div>
    </div>
@@ -47,17 +95,17 @@
                                             }
                                         </style>
                                         <td>
-                                            <img style="height:150px;width:150px" class="img-responsive" src="{{img}}">
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/1.jpg">
                                         </td>
                                         <td>
                                             <div style="display: inline-block" id="place">
-                                                <h3>{{place}}Sungod Lounge</h3>
+                                                <h3>{{place}}Sungod<br /> Lounge</h3>
 
                                                 <p style="display: inline-block" id="location">
                                                 <h5>{{location}}PC East</h5>
                                                 </p>
                                                 <p style="display: inline-block" id="hours">
-                                                <h5>{{hours}} Daily 10AM- 11PM</h5>
+                                                <h5>{{hours}} Daily<br /> 10AM- 11PM</h5>
                                                 </p>
                                             </div>
                                         </td>
@@ -80,15 +128,15 @@
 
                                                     <div class="flexbox flex-tabs">
 <fieldset class="rating">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star5" name="rating1" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
     <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star4" name="rating1" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
     <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star3" name="rating1" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
     <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star2" name="rating1" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
     <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="star1" name="rating1" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
     <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
 </fieldset>
                                                         <p> <h5>&nbsp&nbsp&nbsp
@@ -140,17 +188,19 @@
                                             }
                                         </style>
                                         <td>
-                                            <img style="height:150px;width:150px" class="img-responsive" src="{{img}}">
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/2.jpg">
                                         </td>
                                         <td>
                                             <div style="display: inline-block" id="place">
-                                                <h3>{{place}}Treehouse Lounge</h3>
+                                                <h3>{{place}}Treehouse<br /> Lounge</h3>
 
                                                 <p style="display: inline-block" id="location">
-                                                <h5>{{location}}Old Student Center</h5>
+                                                <h5>{{location}}The Student Center</h5>
                                                 </p>
                                                 <p style="display: inline-block" id="hours">
-                                                <h5>{{hours}}Daily 10AM - 8 PM</h5>
+                                                <h5>{{hours}}Mon.–Fri.:<br /> 8 a.m. to 11 p.m.<br />
+													Saturdays:<br /> 9 a.m. to 11 p.m.<br />
+													Sundays:<br /> 10 a.m. to 11 p.m.</h5>
                                                 </p>
                                             </div>
                                         </td>
@@ -173,16 +223,16 @@
 
                                                     <div class="flexbox flex-tabs">
  <fieldset class="rating">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    <input type="radio" id="star55" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star44half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star44" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star33half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star33" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star22half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star22" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star11half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star11" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
 </fieldset>
                                                         <p> <h5>&nbsp&nbsp&nbsp
                                                                 &nbsp&nbsp&nbsp
@@ -234,17 +284,212 @@
                                             }
                                         </style>
                                         <td>
-                                            <img style="height:150px;width:150px" class="img-responsive" src="{{img}}">
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/3.jpg">
                                         </td>
                                         <td>
                                             <div style="display: inline-block" id="place">
-                                                <h3>{{place}}Geisel Library Seuss Room</h3>
+                                                <h3>{{place}}Geisel Library<br /> Seuss Room</h3>
 
                                                 <p style="display: inline-block" id="location">
                                                 <h5>{{location}}Geisel Library West</h5>
                                                 </p>
                                                 <p style="display: inline-block" id="hours">
-                                                <h5>{{hours}}Daily 8AM-8PM</h5>
+                                                <h5>{{hours}}Daily<br /> 8AM-8PM</h5>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <style type="text/css">
+                                .dropdown {
+                                    padding: 0 10px 0 5px;
+                                }
+
+                                .classA {
+                                    background: lightgray;
+                                }
+
+                                .classB {
+                                    background: lightgreen;
+                                }
+                            </style>
+
+                                                    <div class="flexbox flex-tabs">
+ <fieldset class="rating">
+    <input type="radio" id="star555" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star444half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star444" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star333half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star333" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star222half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star222" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star111half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star111" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf11" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+                                                        <p> <h5>&nbsp&nbsp&nbsp
+                                                                &nbsp&nbsp&nbsp
+                                                                Rate this Spot! </h5></p>
+                        </div>
+                        </div>
+                        <script>
+                            $(function () {
+                                $("#details").click(function () {
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');
+                                    $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function () {
+                                $("#discussion").click(function () {
+                                    console.log("this works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    //$("#contents").html("");
+                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
+
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+       <div id="contents">
+        {{about}}
+    </div>
+
+        <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td {
+                                                padding: 0 10px 0 5px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/4.jpg">
+                                        </td>
+                                        <td>
+                                            <div style="display: inline-block" id="place">
+                                                <h3>{{place}}Quiet<br /> Lounge</h3>
+
+                                                <p style="display: inline-block" id="location">
+                                                <h5>{{location}}Biomedical Library</h5>
+                                                </p>
+                                                <p style="display: inline-block" id="hours">
+                                                <h5>{{hours}}
+													Mon.–Thurs.:<br /> 8 a.m. to midnight<br /> 
+													Fridays:<br /> 8 a.m. to 6 p.m.<br /> 
+													Saturdays:<br /> 10 a.m. to 6 p.m.<br /> 
+													Sundays:<br /> noon to midnight</h5>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <style type="text/css">
+                                .dropdown {
+                                    padding: 0 10px 0 5px;
+                                }
+
+                                .classA {
+                                    background: lightgray;
+                                }
+
+                                .classB {
+                                    background: lightgreen;
+                                }
+                            </style>
+
+                                                    <div class="flexbox flex-tabs">
+ <fieldset class="rating">
+    <input type="radio" id="star5555" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4444half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4444" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3333half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3333" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2222half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2222" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1111half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1111" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf111" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+                                                        <p> <h5>&nbsp&nbsp&nbsp
+                                                                &nbsp&nbsp&nbsp
+                                                                Rate this Spot! </h5></p>
+                        </div>
+                        </div>
+                        <script>
+                            $(function () {
+                                $("#details").click(function () {
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');
+                                    $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function () {
+                                $("#discussion").click(function () {
+                                    console.log("this works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    //$("#contents").html("");
+                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
+
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+       <div id="contents">
+        {{about}}
+    </div>
+
+        <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td {
+                                                padding: 0 10px 0 5px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/5.jpg">
+                                        </td>
+                                        <td>
+                                            <div style="display: inline-block" id="place">
+                                                <h3>{{place}}PC Computer<br /> Lab</h3>
+
+                                                <p style="display: inline-block" id="location">
+                                                <h5>{{location}}Price Center East</h5>
+                                                </p>
+                                                <p style="display: inline-block" id="hours">
+                                                <h5>{{hours}}
+                                                Sundays<br /> 9:30 a.m. to midnight<br /> 
+												Mondays<br /> 6:30 a.m. to Friday midnight<br /> 
+												Saturdays: 8 a.m. to midnight</h5>
                                                 </p>
                                             </div>
                                         </td>
@@ -309,9 +554,323 @@
         </section>
     </div>
 
-    <div id="contents">
+       <div id="contents">
         {{about}}
     </div>
+
+        <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td {
+                                                padding: 0 10px 0 5px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/6.jpg">
+                                        </td>
+                                        <td>
+                                            <div style="display: inline-block" id="place">
+                                                <h3>{{place}}Sun God<br /> Meeting Rooms</h3>
+
+                                                <p style="display: inline-block" id="location">
+                                                <h5>{{location}}Price Center West</h5>
+                                                </p>
+                                                <p style="display: inline-block" id="hours">
+                                                <h5>{{hours}}Mon.–Fri.:<br /> 7 a.m. to 11 p.m.<br /> 
+													Saturdays:<br />  8 a.m. to 11 p.m.<br /> 
+													Sundays:<br /> 9:30 a.m. to 11 p.m.</h5>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <style type="text/css">
+                                .dropdown {
+                                    padding: 0 10px 0 5px;
+                                }
+
+                                .classA {
+                                    background: lightgray;
+                                }
+
+                                .classB {
+                                    background: lightgreen;
+                                }
+                            </style>
+
+                                                    <div class="flexbox flex-tabs">
+ <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+                                                        <p> <h5>&nbsp&nbsp&nbsp
+                                                                &nbsp&nbsp&nbsp
+                                                                Rate this Spot! </h5></p>
+                        </div>
+                        </div>
+                        <script>
+                            $(function () {
+                                $("#details").click(function () {
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');
+                                    $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function () {
+                                $("#discussion").click(function () {
+                                    console.log("this works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    //$("#contents").html("");
+                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
+
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+       <div id="contents">
+        {{about}}
+    </div>
+
+        <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td {
+                                                padding: 0 10px 0 5px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/7.jpg">
+                                        </td>
+                                        <td>
+                                            <div style="display: inline-block" id="place">
+                                                <h3>{{place}}Fireside<br /> Lounge</h3>
+
+                                                <p style="display: inline-block" id="location">
+                                                <h5>{{location}}The Student Center</h5>
+                                                </p>
+                                                <p style="display: inline-block" id="hours">
+                                                <h5>{{hours}}Mon.–Fri.:<br /> 8 a.m. to 11 p.m.<br />
+													Saturdays:<br /> 9 a.m. to 11 p.m.<br />
+													Sundays:<br /> 10 a.m. to 11 p.m.</h5>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <style type="text/css">
+                                .dropdown {
+                                    padding: 0 10px 0 5px;
+                                }
+
+                                .classA {
+                                    background: lightgray;
+                                }
+
+                                .classB {
+                                    background: lightgreen;
+                                }
+                            </style>
+
+                                                    <div class="flexbox flex-tabs">
+ <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+                                                        <p> <h5>&nbsp&nbsp&nbsp
+                                                                &nbsp&nbsp&nbsp
+                                                                Rate this Spot! </h5></p>
+                        </div>
+                        </div>
+                        <script>
+                            $(function () {
+                                $("#details").click(function () {
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');
+                                    $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function () {
+                                $("#discussion").click(function () {
+                                    console.log("this works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    //$("#contents").html("");
+                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
+
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+       <div id="contents">
+        {{about}}
+    </div>
+
+        <div class="g-grid">
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3" role="row">
+                        <div class="well well-lg" style="margin-bottom:0px" role="gridcell">
+                            <div class="poster-card__image" style="display: inline-block">
+                                <table>
+                                    <tr>
+                                        <style type="text/css">
+                                            td {
+                                                padding: 0 10px 0 5px;
+                                            }
+                                        </style>
+                                        <td>
+                                            <img style="height:150px;width:150px" class="img-responsive" src="../images/8.jpg">
+                                        </td>
+                                        <td>
+                                            <div style="display: inline-block" id="place">
+                                                <h3>{{place}}The Overnight<br /> Study Commons</h3>
+
+                                                <p style="display: inline-block" id="location">
+                                                <h5>{{location}}Geisel Library</h5>
+                                                </p>
+                                                <p style="display: inline-block" id="hours">
+                                                <h5>{{hours}}	Mon.–Thurs.:<br /> 7:30 a.m. to midnight<br />
+												Fridays:<br /> 7:30 a.m. to 6 p.m.<br />
+												Saturdays:<br /> 10 a.m. to 6 p.m.<br />
+												Sundays:<br /> 10 a.m. to midnight</h5>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <style type="text/css">
+                                .dropdown {
+                                    padding: 0 10px 0 5px;
+                                }
+
+                                .classA {
+                                    background: lightgray;
+                                }
+
+                                .classB {
+                                    background: lightgreen;
+                                }
+                            </style>
+
+                                                    <div class="flexbox flex-tabs">
+ <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+                                                        <p> <h5>&nbsp&nbsp&nbsp
+                                                                &nbsp&nbsp&nbsp
+                                                                Rate this Spot! </h5></p>
+                        </div>
+                        </div>
+                        <script>
+                            $(function () {
+                                $("#details").click(function () {
+                                    console.log("this works!");
+                                    $("#details").attr('class', 'active');
+                                    $("#discussion").attr('class', '');
+                                    $("#contents").html("<p>{{about}}</p>");
+                                });
+                            });
+                            $(function () {
+                                $("#discussion").click(function () {
+                                    console.log("this works too!");
+                                    $("#discussion").attr('class', 'active');
+                                    $("#details").attr('class', '');
+                                    //$("#contents").html("");
+                                    document.getElementById("contents").innerHTML = '<object type="type/html" data="discusspage.html" ></object>';
+
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 
     <!--Nav Bar -->
      <nav class="navbar navbar-default navbar-fixed-bottom">
