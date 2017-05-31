@@ -24,9 +24,6 @@ var currLoc = null;
        document.getElementById('submit').addEventListener('click', function() {
          calculateAndDisplayRoute(directionsService, directionsDisplay, sessionStorage.getItem('toggleBool'));
        });
-
-       // Locate user position
-       if (sessionStorage.getItem('toggleBool') == "true"){
          if (navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(function(position) {
              currLoc = {
@@ -34,16 +31,18 @@ var currLoc = null;
                lng: position.coords.longitude
              };
 
-             var marker = new google.maps.Marker({
-              position: currLoc,
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 4
-                },
-              map: map
-              });
-             infoWindow.open(map);
-             map.setCenter(currLoc);
+
+            var marker = new google.maps.Marker({
+             position: currLoc,
+             icon: {
+               path: google.maps.SymbolPath.CIRCLE,
+               scale: 4,
+               strokeColor: '#00C6D7'
+               },
+             map: map
+             });
+
+                          map.setCenter(currLoc);
            }, function() {
              handleLocationError(true, infoWindow, map.getCenter());
            });
@@ -52,7 +51,7 @@ var currLoc = null;
            handleLocationError(false, infoWindow, map.getCenter());
          }
        }
-     }
+
 
 
      //Location error handler
@@ -205,23 +204,26 @@ var currLoc = null;
                  markersArray.push(marker);
 
 
-
                  if (roomNums[i] != " " && courseNames[i] != " "){
                    marker['locInfo'] = new google.maps.InfoWindow({
-                     content: courseNames[i] + "\nRoom Number: " + roomNums[i]
+                     content: courseNames[i] + "\n Room Number: " + roomNums[i]
                    });
+
+                   console.log("option 1")
                  }
 
                  else if (courseNames[i] == ""){
                    marker['locInfo'] = new google.maps.InfoWindow({
                      content: "\nRoom Number: " + roomNums[i]
                    });
+                    console.log("option 2")
                  }
 
                  else if (roomsNums[i] == ""){
                    marker['locInfo'] = new google.maps.InfoWindow({
                      content: courseNames[i]
                    });
+                    console.log("option 3")
                  }
 
                  marker.addListener('mouseover', function() {
@@ -241,6 +243,7 @@ var currLoc = null;
                  });
 
                  markersArray.push(marker);
+                 console.log("pushed marker 2");
 
                  marker['locInfo'] = new google.maps.InfoWindow({
                    content: courseNames[courseNames.length - 1] + "Room: " + roomNums[roomNums.length - 1]

@@ -6,13 +6,20 @@ var rooms = [];
 
 var courseEvents = [];
 
+var colorsArray = ["#006A96", "#00465F","#747678", "#AFA9A0", "#747678", "#FFCD00", "#00C6D7"];
+
 $(document).ready(function() {
 
 // page is now ready, initialize the calendar...
 
+
+
 $('#calendar').fullCalendar({
-    weekends: false, // will hide Saturdays and Sundays
-    editable: true,
+    header: {
+        left: '',
+        center: 'Title',
+        right: "deleteSchedule",
+    },
 
     customButtons: {
       deleteSchedule: {
@@ -24,23 +31,22 @@ $('#calendar').fullCalendar({
         }
       }
     },
+    weekends: false,
+    editable: true,
+    displayEventTime: false,
+    views: {
+        weekly: {
+            type: 'basicWeek',
+            title: 'Weekly Schedule',
+            columnFormat: 'dddd',
+            allDaySlot: false,
+            minTime: "07:00:00",
+            maxTime: "21:00:00",
+            snapDuration: "0:01"
 
-    views:{
-      weekly: {
-        title: "Weekly Schedule",
-        type: 'basicWeek',
-        duration: { days: 5 },
-        columnFormat: 'dddd',
-        hiddendays:[0,6]
-      }
+
+        }
     },
-
-    header: {
-      left: "",
-      center: "title",
-      right: "deleteSchedule"
-    },
-
     defaultView: 'weekly',
 });
 
@@ -61,14 +67,14 @@ var createEvents = function(){
 
     for (var i = 1; i < classDays.length; i++){
       for (var j = 0; j < halls.length; j++){
-        console.log(courses[j]);
-        console.log(classDays[i]);
+        var color = colorsArray[j];
         courseEvents.push({
-          title  : courses[j],
+          title  : courses[j] + "\n" + halls[j].substr(0, halls[j].indexOf(',')) + "\n Room " + rooms[j],
           start  : moment().day(classDays[i]),
           end: moment().day(classDays[i]),
           editable: true,
-          durationEditable: true
+          durationEditable: true,
+          color: color
         });
       }
     }
