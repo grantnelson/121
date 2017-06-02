@@ -13,21 +13,45 @@
     <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" rel="stylesheet">
     <link href="/css/classtrek.css" rel="stylesheet">
 
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
 
 
   </head>
 
   <body id="background" ng-controller = "mainController">
 
-    <!--Navbar-->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-     <div class="container-fluid">
-       <div class="navbar-header">
-        <a class="navbar-brand" href="">
-          <img id = "logo" alt="Brand" src= "../images/logo.png">
-        </a>
-      </div>
-     </div>
+    <!--Nav Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <a class="navbar-brand pull-right">
+            <img class = "brand" src = "../images/logo.svg"></img>
+          </a>
+
+
+          <a class="navbar-brand pull-left" href="/schedule">
+            <span class="glyphicon glyphicon-list tab"></span>
+          </a>
+          <a class="navbar-brand pull-left" href="">
+            <span class="glyphicon glyphicon-home focusme"></span>
+          </a>
+          <a class="navbar-brand pull-left" href="/explore">
+            <span class="glyphicon glyphicon-search tab"></span>
+          </a>
+
+
+          </div>
+        </div>
     </nav>
 
     <div class = "row">
@@ -56,7 +80,7 @@
 
           <div class = "col col-md-1">
             <button class = "btn form-control" id = "toggleStart" ng-click = "toggleStart($event)">
-                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                <img src = {[{toggleButton}]}></img>
             </button>
           </div>
         </div>
@@ -108,28 +132,10 @@
           </div>
 
         </div>
+        </div>
 
-        <!--Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/schedule">
-                  <span class="glyphicon glyphicon-list tab"></span>
-                </a>
 
-                <a class="navbar-brand" href="">
-                  <span class="glyphicon glyphicon-home focusme"></span>
-                </a>
 
-                <a class="navbar-brand" href="/explore">
-                  <span class="glyphicon glyphicon-search tab"></span>
-                </a>
-            </div>
-            
-          </div>
-        </nav>
-
-      </div>
 
     <script src="/js/map.js"></script>
 
@@ -137,16 +143,9 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&libraries=places&callback=initMap">
      </script>
-    <!--JQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    <!-- Angular Material requires Angular.js Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+     <script async defer src = "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDQ1uC3vKjz93ui5Qr_l4XPNG9dxJrhSVs&center=32.87895429571823,-117.2399532382828&zoom=17&format=png&maptype=roadmap&style=element:labels.icon%7Cvisibility:simplified&style=element:labels.text.fill%7Ccolor:0x413e39&style=element:labels.text.stroke%7Ccolor:0xf8f7ff&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0xf1efe8&style=feature:landscape.man_made%7Celement:geometry.fill%7Cgamma:1.33%7Cvisibility:on&style=feature:landscape.man_made%7Celement:geometry.stroke%7Ccolor:0x00335f%7Cvisibility:on&style=feature:poi.business%7Celement:geometry.fill%7Ccolor:0xeeebe3&style=feature:poi.business%7Celement:geometry.stroke%7Ccolor:0x00335f&style=feature:road.highway%7Celement:geometry.fill%7Ccolor:0xafa9a0&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0x00244e&style=feature:road.local%7Celement:geometry.fill%7Ccolor:0x5f6f7a&style=feature:water%7Celement:geometry.fill%7Ccolor:0x8ac0c4&size=480x360"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
@@ -243,4 +242,3 @@
 
   </body>
 </html>
-

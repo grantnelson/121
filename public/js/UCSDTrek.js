@@ -14,6 +14,7 @@ app.controller('mainController', function($scope, $mdDialog){
 
   $scope.numbers = [{}];
   $scope.courses = [{}];
+  $scope.toggleButton = "../images/toggleblue.png";
 
   $scope.autoComplete = function(){
     setTimeout(function(){
@@ -36,13 +37,13 @@ app.controller('mainController', function($scope, $mdDialog){
 
     if(sessionStorage.getItem('toggleBool') == "true"){
       sessionStorage.setItem('toggleBool', false);
-      document.getElementById("toggleStart").style.color = "#e1e3e8";
+      $scope.toggleButton = "../images/togglewhite.png";
       console.log(false);
     }
 
     else {
       sessionStorage.setItem('toggleBool', true);
-      document.getElementById("toggleStart").style.color = "#ef3737";
+      $scope.toggleButton = "../images/toggleblue.png";
       console.log(true);
     }
 
