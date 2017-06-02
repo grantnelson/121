@@ -170,7 +170,7 @@ function initMap() {
 
      //If only one input place marker
      if (points.length == 1 && sessionStorage.getItem('toggleBool') == "false" ){
-       window.alert("only one loc");
+       window.alert("Need 1 more course");
      }
 
      //Else create points and calculate route
